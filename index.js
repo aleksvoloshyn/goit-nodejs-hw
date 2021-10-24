@@ -1,12 +1,7 @@
 const { Command } = require("commander");
 const chalk = require("chalk");
 const program = new Command();
-const {
-  listContacts,
-  addContact,
-  getContactById,
-  removeContact,
-} = require("./contacts");
+const contactsOperations = require("./contacts");
 program
   .requiredOption("-a, --action <type>", "choose action")
   .option("-i, --id <type>", "user id")
@@ -21,10 +16,8 @@ const argv = program.opts();
 (async ({ action, id, name, email, phone }) => {
   try {
     switch (action) {
-      case "list":
-        const contacts = await listContacts();
-        console.table(contacts);
-        break;
+      case "listContacts":
+        return await contactsOperations.listContacts();
 
       case "get":
         const contactById = await getContactById(id);
