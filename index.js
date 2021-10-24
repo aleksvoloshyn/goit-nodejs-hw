@@ -41,7 +41,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       console.log(newContact);
       return newContact;
     // Обновить товар по ID
-    // yarn start --action updateById --id QGBPvsyAh6p3FT3WCXdX4 --name JohnSnow --email JOHNNNNN@mail.ru --phone 5365333
+    // yarn start --action updateById --id 0uetW3h_yd5auC3ojrQny --name JohnSnow --email JOHNNNNN@mail.ru --phone 5365333
     case "updateById":
       const updateContact = await updateById(id, name, email, phone);
       console.log(updateContact);
