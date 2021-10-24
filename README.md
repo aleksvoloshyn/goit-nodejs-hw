@@ -6,4 +6,4 @@
 4. updateById: https://prnt.sc/1x8k3ga
 5. remove: https://prnt.sc/1x8k8ub
 
-![list](/--action list.png)
+![list](/--action_list.png)
