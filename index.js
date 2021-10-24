@@ -1,7 +1,7 @@
 const { Command } = require("commander");
 const chalk = require("chalk");
 const program = new Command();
-const { getAll, getById } = require("./contacts");
+const { getAll, getById, add } = require("./contacts");
 
 program
   .requiredOption("-a, --action <type>", "choose action")
@@ -25,10 +25,10 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       return contactById;
 
     case "add":
-      const contact = await addContact(name, email, phone);
+      const newContact = await add({ name, email, phone });
       console.log(chalk.green("Add new contact"));
-      console.log(contact);
-      break;
+      console.log(newContact);
+      return newContact;
 
     case "remove":
       // ... id
