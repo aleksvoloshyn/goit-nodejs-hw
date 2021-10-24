@@ -1,6 +1,6 @@
 # goit-nodejs-hw
 
-1. GEtlist : https://prnt.sc/1x8j4yb
+1. list : https://prnt.sc/1x8j4yb
    https://prnt.sc/1x8jsm6
 2. getById: https://prnt.sc/1x8jsm6
 3. add: https://prnt.sc/1x8jvf8
